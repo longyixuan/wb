@@ -16,8 +16,7 @@ module.exports = {
     app: ['babel-polyfill','./src/main.js']
   },
   externals:{
-    vue: "Vue",
-    iview: "iview"
+    vue: "Vue"
   },
   output: {
     path: config.build.assetsRoot,

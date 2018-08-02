@@ -1,8 +1,8 @@
 {
-  "name": "zyck",
+  "name": "yzwb",
   "version": "1.0.0",
-  "description": "zyck Vue.js project",
-  "author": "mayx",
+  "description": "yzwb Vue.js project",
+  "author": "yinxl",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --colors --config build/webpack.dev.conf.js",
@@ -14,11 +14,9 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "iview": "^2.13.1",
-    "qs": "^6.5.2",
-    "vue": "^2.5.2",
+    "vant": "^1.1.14",
+    "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vue-wechat-title": "^2.0.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
