@@ -3,7 +3,7 @@
     <van-datetime-picker
         v-model="CurrentDate"
         type="date"
-        :min-date="new Date('1900-01-01')"
+        :min-date="new Date('1910-01-01')"
         @confirm="confirm"
         @cancel="cancel"
     />
@@ -36,7 +36,7 @@ export default {
             this.$emit('cancel');
         },
         init () { //出生日期插件编辑赋值
-            this.CurrentDate = new Date(this.defaultValue);
+            this.$set(this, 'CurrentDate', new Date(this.defaultValue));
         }
     },
     mounted () {

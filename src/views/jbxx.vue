@@ -1,6 +1,6 @@
 <template>
     <div class="yzwb-jbxx">
-        <van-cell-group>
+        <van-panel title="基本信息" status="1/7">
             <van-field 
                 v-model="ksxm.value"
                 placeholder=""
@@ -14,7 +14,7 @@
             />
             <van-field
                 v-model="xmpy.value"
-                placeholder="请输入姓名拼音"
+                placeholder=""
                 label="姓名拼音"
                 required
                 :error="xmpy.error"
@@ -74,17 +74,6 @@
                 disabled
             />
             <van-field
-                v-model="ksmz.value"
-                placeholder=""
-                label="考生民族"
-                required
-                :error="ksmz.error"
-                :error-message="ksmz.errorMessage"
-                icon="arrow"
-                @click-icon="openPicker('yzwbSelectPicker','ksmz')"
-                disabled
-            />
-            <van-field
                 v-model="hyzk.value"
                 placeholder=""
                 label="婚姻状况"
@@ -117,7 +106,17 @@
                 @click-icon="openPicker('yzwbSelectPicker','zzmm')"
                 disabled
             />
-        </van-cell-group>
+            <van-cell-group>
+                <van-cell>
+                    <template slot="title">
+                        <span class="van-cell-text">说明：以上不可修改项信息来自 <a href="###">实名注册</a> ，如证件号码填写错误，请重新注册学信网账号。</span>
+                    </template>
+                </van-cell>
+                <van-cell>
+                    <van-button size="large" type="primary">下一步</van-button>
+                </van-cell>
+            </van-cell-group>
+        </van-panel>
         <!-- 选择器插件 -->
         <van-popup v-model="Picker.isShow" position="bottom">
             <keep-alive>
@@ -217,4 +216,19 @@ export default {
     }
 }
 </script>
+<style lang="less">
+    .yzwb-jbxx {
+        .van-panel__header {
+            background-color: #e8eaec;
+            color: #455a64;
+        }
+        .van-cell__value {
+            color: #455a64;
+        }
+        .van-hairline--top-bottom::after {
+            border-width: 0;
+        }
+    }
+</style>
+
 
