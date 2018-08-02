@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Vant from 'vant';
+import moment from 'moment'
+import 'vant/lib/vant-css/index.css';
 import router from './router';
 import store from './store';
 import Layout from './components/layout';
