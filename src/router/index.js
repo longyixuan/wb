@@ -17,6 +17,14 @@ const routes = [
         },
         name: 'hjda',
         component: (resolve) => require(['@/views/hjda'], resolve)
+    },
+    {
+        path: '/jtxx',
+        meta: {
+            title: '家庭信息'
+        },
+        name: 'jtxx',
+        component: (resolve) => require(['@/views/jtxx'], resolve)
     }
 ]
 

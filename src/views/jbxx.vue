@@ -1,6 +1,6 @@
 <template>
-    <div class="yzwb-jbxx">
-        <van-panel title="基本信息" status="1/7">
+    <div class="yzwb-ksxx">
+        <van-panel title="基本信息" status="2/7">
             <van-field 
                 v-model="ksxm.value"
                 placeholder=""
@@ -113,7 +113,7 @@
                     </template>
                 </van-cell>
                 <van-cell>
-                    <van-button size="large" type="primary">下一步</van-button>
+                    <van-button size="large" type="primary" @click="$router.push({ name: 'hjda' })">下一步</van-button>
                 </van-cell>
             </van-cell-group>
         </van-panel>
@@ -216,19 +216,5 @@ export default {
     }
 }
 </script>
-<style lang="less">
-    .yzwb-jbxx {
-        .van-panel__header {
-            background-color: #e8eaec;
-            color: #455a64;
-        }
-        .van-cell__value {
-            color: #455a64;
-        }
-        .van-hairline--top-bottom::after {
-            border-width: 0;
-        }
-    }
-</style>
 
 
