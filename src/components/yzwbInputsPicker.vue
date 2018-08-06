@@ -1,33 +1,27 @@
 <template>
     <van-panel class="yzwb-panel">
         <van-nav-bar
-            title="家庭信息"
+            title="工作与学习经历"
             left-arrow
             @click-left="goback"
         />
         <van-field
-            v-model="formData.name"
+            v-model="formData.date"
             required
             clearable
-            label="姓名"
+            label="起止年月"
         />
         <van-field
-            v-model="formData.relation"
+            v-model="formData.company"
             required
             clearable
-            label="关系"
+            label="学习或工作单位"
         />
         <van-field
             v-model="formData.position"
             required
             clearable
-            label="单位/职务"
-        />
-        <van-field
-            v-model="formData.phone"
-            required
-            clearable
-            label="联系电话"
+            label="任何职务"
         />
         <van-cell-group>
             <van-cell>
@@ -43,10 +37,9 @@ export default {
     data () {
         return {
             formData: {
-                name: '',
-                relation: '',
-                position: '',
-                phone: ''   
+                date: '',
+                company: '',
+                position: '' 
             }
         }
     },
@@ -67,19 +60,17 @@ export default {
     methods: {
         init () {
             if (!!this.defaultValue) {
-                this.formData.name = this.defaultValue.name;
-                this.formData.relation = this.defaultValue.relation;
+                this.formData.date = this.defaultValue.date;
+                this.formData.company = this.defaultValue.company;
                 this.formData.position = this.defaultValue.position;
-                this.formData.phone = this.defaultValue.phone;
             } else {
-                this.formData.name = '';
-                this.formData.relation = '';
+                this.formData.date = '';
+                this.formData.company = '';
                 this.formData.position = '';
-                this.formData.phone = '';
             }
         },
         save () {
-            if(this.formData.name===""&&this.formData.relation===""&&this.formData.position===""&&this.formData.phone==="") {
+            if(this.formData.date===""&&this.formData.company===""&&this.formData.position==="") {
                 this.$toast("请填写一条完整的记录");
             } else {
                 this.$emit('save',this.formData)

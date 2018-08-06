@@ -25,6 +25,30 @@ const routes = [
         },
         name: 'jtxx',
         component: (resolve) => require(['@/views/jtxx'], resolve)
+    },
+    {
+        path: '/gzxxjl',
+        meta: {
+            title: '工作与学习经历'
+        },
+        name: 'gzxxjl',
+        component: (resolve) => require(['@/views/gzxxjl'], resolve)
+    },
+    {
+        path: '/jcxx',
+        meta: {
+            title: '奖惩信息'
+        },
+        name: 'jcxx',
+        component: (resolve) => require(['@/views/jcxx'], resolve)
+    },
+    {
+        path: '/lxfs',
+        meta: {
+            title: '联系方式'
+        },
+        name: 'lxfs',
+        component: (resolve) => require(['@/views/lxfs'], resolve)
     }
 ]
 

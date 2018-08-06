@@ -22,17 +22,35 @@
             </template>
             <van-cell-group>
                 <van-cell>
-                    <van-button size="large" type="primary">下一步</van-button>
+                    <van-button size="large" type="primary" @click="$router.push({ name: 'gzxxjl' })">下一步</van-button>
                 </van-cell>
             </van-cell-group>
         </van-panel>
+        <van-popup v-model="Picker.isShow" position="right" class="yzwb-popup">
+            <yzwb-input-picker
+                :defaultValue="Picker.value"
+                :defaultIndex= "Picker.defaultIndex"
+                @save="save"
+                @del="del"
+                @goback="goback"
+            />
+        </van-popup>
     </div>
 </template>
 <script>
+import yzwbInputPicker from '@/components/yzwbInputPicker'
 export default {
     name: 'jtxx',
+    components: {
+        yzwbInputPicker
+    },
     data () {
         return {
+            Picker: {
+                isShow: false,
+                value: null,
+                defaultIndex: -1
+            },
             jtcy: [ //家庭信息
                 {
                     name: '张敏',
@@ -55,11 +73,27 @@ export default {
     },
     methods: {
         editJtcy (index) { //增加、修改家庭信息
-            if (index === -1) {
-                console.log(index)
+            this.Picker.value = index === -1 ? null : this.jtcy[index];
+            this.Picker.defaultIndex = index;
+            this.Picker.isShow = true;
+        },
+        save (value) {
+            if(this.Picker.defaultIndex===-1) {
+                this.jtcy.push(value)
             } else {
-                console.log(index)
+                this.jtcy[this.Picker.defaultIndex].name = value.name;
+                this.jtcy[this.Picker.defaultIndex].relation = value.relation;
+                this.jtcy[this.Picker.defaultIndex].phone = value.phone;
+                this.jtcy[this.Picker.defaultIndex].position = value.position;
             }
+            this.Picker.isShow = false;
+        },
+        del () {
+            this.jtcy.splice(this.Picker.defaultIndex,1);
+            this.Picker.isShow = false;
+        },
+        goback () {
+            this.Picker.isShow = false;
         }
     }
 }

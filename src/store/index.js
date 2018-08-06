@@ -7,7 +7,7 @@ import mutations from './mutations.js'
 import getters from './getters.js'
 
 const state = {
-    ksxx: {
+    ksxx: { //基本信息
         ksxm: { //考生姓名
             value: '阿皓',
             error: false,
@@ -65,6 +65,120 @@ const state = {
         },
         hkd: { //户口地
             value: '北京市/市辖区/东城区',
+            error: false,
+            errorMessage: ''
+        },
+        jgd: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        hkd: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        hkdxxdz: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        csd: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        dad: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        daddw: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        daddwdz: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        yzbm: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        jtcy: [ //家庭信息
+            {
+                name: '张敏',
+                relation: '母亲',
+                phone: '13028129329312',
+                position: '北京和谐发展有限公司 / 职员',
+                error: '',
+                errorMessage: ''
+            },
+            {
+                name: '王瑞',
+                relation: '父亲',
+                phone: '1322812932935',
+                position: '北京烤鸭总店 / 店长',
+                error: '',
+                errorMessage: ''
+            }
+        ],
+        xxygzjl: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        gzjl: [
+            {
+                date: '2011-09-01 ~ 2018-09-01',
+                company: '北京知满天文化发展有限公司',
+                position: '会计',
+                error: '',
+                errorMessage: ''
+            },
+            {
+                date: '2018-09-02 ~ 2018-10-01',
+                company: '北京知满天文化发展有限公司',
+                position: '总编',
+                error: '',
+                errorMessage: ''
+            }
+        ],
+        jcxx: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        zbqk: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        txdz: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        yzbm: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        gddh: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        yddh: {
+            value: '',
+            error: false,
+            errorMessage: ''
+        },
+        dzxx: {
+            value: '',
             error: false,
             errorMessage: ''
         }
