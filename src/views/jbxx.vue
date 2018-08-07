@@ -106,10 +106,10 @@
                 @click-icon="openPicker('yzwbSelectPicker','zzmm')"
                 disabled
             />
-            <van-cell-group>
+            <van-cell-group class="yzwb-bg">
                 <van-cell>
                     <template slot="title">
-                        <span class="van-cell-text">说明：以上不可修改项信息来自 <a href="###">实名注册</a> ，如证件号码填写错误，请重新注册学信网账号。</span>
+                        <span class="van-cell-text yzwb-des">说明：以上不可修改项信息来自 <a href="###">实名注册</a> ，如证件号码填写错误，请重新注册学信网账号。</span>
                     </template>
                 </van-cell>
                 <van-cell>

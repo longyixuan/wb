@@ -31,7 +31,7 @@
                     @click-icon = "editGzjl(index)"
                 />
             </template>
-            <van-cell-group>
+            <van-cell-group class="yzwb-bg">
                 <van-cell>
                     <van-button size="large" type="primary" @click="$router.push({ name: 'jcxx' })">下一步</van-button>
                 </van-cell>

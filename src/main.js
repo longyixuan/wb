@@ -3,6 +3,7 @@ import Vant from 'vant';
 import router from './router';
 import store from './store';
 import Layout from './components/layout';
+import 'lib-flexible';
 import './style/index';
 import 'babel-polyfill';
 

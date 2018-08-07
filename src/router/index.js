@@ -3,6 +3,14 @@ import Router from 'vue-router'
 
 const routes = [
     {
+        path: '/',
+        meta: {
+            title: '首页'
+        },
+        name: 'index',
+        component: (resolve) => require(['@/views/index'], resolve)
+    },
+    {
         path: '/jbxx',
         meta: {
             title: '基本信息'
