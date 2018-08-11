@@ -1,13 +1,10 @@
 import Vue from 'vue';
 import Vant from 'vant';
-// import router from './router';
-// import store from './store';
-// import Layout from './components/layout';
+import router from './router';
+import store from './store';
+import Layout from './components/layout';
 import 'lib-flexible';
 import './style/index';
-import yzwbDatePicker from '@/components/yzwbDatePicker'
-import yzwbSheetPicker from '@/components/yzwbSheetPicker'
-import moment from 'moment';
 import VeeValidate, { Validator } from 'vee-validate';
 import zh_CN from 'vee-validate/dist/locale/zh_CN';//引入中文文件
 import 'babel-polyfill';
@@ -19,9 +16,6 @@ Validator.addLocale(zh_CN);
 const config = {
     locale: 'zh_CN'
 };
-window.yzwbDatePicker = yzwbDatePicker;
-window.yzwbSheetPicker = yzwbSheetPicker;
-window.moment = moment;
 Vue.use(VeeValidate, config);
 const dictionary = {
     zh_CN: {
@@ -42,9 +36,9 @@ const dictionary = {
 Validator.updateDictionary(dictionary);
 Vue.use(Vant);
 
-// new Vue({
-//     el: '#app',
-//     router,
-//     store,
-//     render: h => h(Layout)
-// })
+new Vue({
+    el: '#app',
+    router,
+    store,
+    render: h => h(Layout)
+})

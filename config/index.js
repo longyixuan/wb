@@ -43,9 +43,9 @@ module.exports = {
     copypath: path.resolve(__dirname, '../../stu/'),
     
     // Paths
-    assetsRoot: path.resolve(__dirname, '../../assets/stu/'),
+    assetsRoot: path.resolve(__dirname, '../../assets/wb/'),
     assetsSubDirectory: '',
-    assetsPublicPath: cdnPath+'/zyck/assets/stu/',
+    assetsPublicPath: '/apply/assets/wb/',
 
     /**
      * Source Maps

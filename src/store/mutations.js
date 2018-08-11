@@ -1,6 +1,5 @@
 export default {
     setJbxx (states, data) {
-
     },
     sethjda (states, data) {
 

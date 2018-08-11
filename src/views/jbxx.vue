@@ -17,8 +17,10 @@
                 placeholder=""
                 label="姓名拼音"
                 required
-                :error="xmpy.error"
-                :error-message="xmpy.errorMessage"
+                v-validate="'required'"
+                name="xmpy"
+                :class="{'van-field--error': errors.has('xmpy')}"
+                :error-message="errors.first('xmpy')"
             />
             <van-field
                 v-model="zjlx.value"
@@ -136,6 +138,7 @@ export default {
     },
     data () {
         return {
+            comment: '',
             Picker: {
                 isShow: false,
                 value: '',
@@ -149,8 +152,6 @@ export default {
             },
             xmpy: {
                 value: '',
-                error: true,
-                errorMessage: '姓名拼音不能为空'
             },
             zjlx: {
                 value: '01（居民身份证）',
@@ -212,7 +213,6 @@ export default {
         }
     },
     mounted () {
-        
     }
 }
 </script>

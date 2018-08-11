@@ -61,11 +61,38 @@ body {
 .van-button--large {
     height: 94px;
     line-height: 92px;
+    font-size: 36px;
 }
 .yzwb-bg {
     .van-cell {
         padding-top: 32px;
         padding-bottom: 0;
         background: #f5f5f5;
+        &:after {
+            border-width: 0;
+        }
+        &:last-child {
+            padding-bottom: 32px;
+        }
+    }
+}
+.yzwb-header {
+    text-align: center;
+    font-size: 34px;
+    line-height: 48px;
+    padding: 20px;
+    color: #fff;
+    background: #2893E9;
+}
+form {
+    margin-bottom: 0;
+}
+.van-actionsheet__cancel, .yzwb-tip {
+    padding: 12px 40px;
+    line-height: 40px;
+    height: auto; 
+    color: #888;
+    .van-actionsheet__name {
+        font-size: 28px;
     }
 }

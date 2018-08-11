@@ -57,10 +57,18 @@ const routes = [
         },
         name: 'lxfs',
         component: (resolve) => require(['@/views/lxfs'], resolve)
+    },
+    {
+        path: '/xlxx',
+        meta: {
+            title: '联系方式'
+        },
+        name: 'xlxx',
+        component: (resolve) => require(['@/views/xlxx'], resolve)
     }
 ]
 
 export default new Router({
-    base: '/message.do/', //使用正确的路由配置
+    base: '/apply/jbxx/show.do', //使用正确的路由配置
     routes: routes
 })

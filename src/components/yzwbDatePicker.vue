@@ -2,7 +2,7 @@
     <!-- 时间选择器组件 -->
     <van-datetime-picker
         v-model="CurrentDate"
-        type="date"
+        :type="type"
         :min-date="new Date('1910-01-01')"
         @confirm="confirm"
         @cancel="cancel"
@@ -25,6 +25,10 @@ export default {
         "name": {
             type: String,
             defalut: ""
+        },
+        "type": {
+            type: String,
+            defalut: "date"
         }
     },
     methods: {
@@ -36,6 +40,9 @@ export default {
             this.$emit('cancel');
         },
         init () { //出生日期插件编辑赋值
+            if(this.defaultValue === "") {
+                return ;
+            }
             this.$set(this, 'CurrentDate', new Date(this.defaultValue));
         }
     },
